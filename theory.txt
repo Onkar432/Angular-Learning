@@ -1,0 +1,16 @@
+Generating inline styles and templates
+1> Generating insile style file: use command ng g c user-list --inline-style,This will generate a component name as user-list without css file
+   we have to add css inlinelly using ts file.
+    styles: [
+    `.user { color: red; }`
+  ]
+  and add class name as user to component's html like <h1 class="user">user-list works!</h1>.
+
+
+
+
+
+  2> Generating insile template file:use command ng g c student-list --inline-template,This will generate a component name as user-list without html file
+   we have to add html inlinelly using ts file.
+
+   3>we can also generate both inline style and inline template at a same time also.
