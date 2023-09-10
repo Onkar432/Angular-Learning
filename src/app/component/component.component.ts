@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./component.component.css']
 })
 export class ComponentComponent {
-  getname(Name: string) {
-    console.log(Name)
-  }
+  displayName: string = '';
 
+  getname(Name: string) {
+    console.log(Name);
+    this.displayName = Name; // Use "this" to access the class property
+  }
 }

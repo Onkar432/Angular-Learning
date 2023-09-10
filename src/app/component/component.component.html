@@ -2,3 +2,7 @@
 <input type="text" placeholder="keyup event" #box1 (keyup)="getname(box1.value)">
 
 <h1 (mouseover)="getname('mouseover')">Hover me to get warning</h1>
+
+<input type="text" placeholder="Write Your name" #box2>
+<button (click)="getname(box2.value)">Click to display your name</button>
+<p>Your Name is {{displayName}}</p>
