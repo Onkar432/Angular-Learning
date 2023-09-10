@@ -1,0 +1,67 @@
+Creating Modules
+Modules are the superset of components we can use multiple components inside single module.
+user-auth
+ |-login
+ |-signUp
+ |-sign-in
+
+ How to create module: ng g m User-auth
+ How to generate component inside module: ng g c User-Auth/login
+
+
+
+----------------------------------------------------------------------------------------------------
+ First we have to register the User-Auth module inside our root module file that is app.module 
+----------------------------------------------------------------------------------------------------
+
+ import { UserAuthModule } from './user-auth/user-auth.module'
+ and also write its name in imports like
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { UserAuthModule } from './user-auth/user-auth.module'
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    UserAuthModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+----------------------------------------------------------------------------------------------------
+ To use a module we first need to export it from User-Auth.module file like this:
+----------------------------------------------------------------------------------------------------
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+
+
+
+@NgModule({
+  declarations: [
+    LoginComponent
+  ],
+  imports: [
+    CommonModule
+  ],
+  exports: [
+    LoginComponent
+  ]
+})
+export class UserAuthModule { }
+-----------------------------------------------------------------------------------------------------------
+
+And now we can use it finally in our root HTML page
