@@ -1,0 +1,4 @@
+Component:Component is created using ng g c user-list.and automatically generateded inside app folder.
+
+How to use component:
+go to components ts file and copy selector and we can use it as a tag in main app's html file
