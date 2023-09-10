@@ -1,0 +1,4 @@
+ng help:- to see all commands
+ng g c login: to create a component name of login .It will be created inside of app with 4 files automatically.
+ng g m user-auth:It will generate module name as user-auth inside app. Module is consider as superset of components.
+ng g c user-auth/sign-up:It will generate a component inside a module name user-auth.
